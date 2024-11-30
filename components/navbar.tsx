@@ -1,14 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import logo from "../app/assets/2.png"
-import { RainbowButton } from "./ui/rainbow-button"
+import { useState } from "react";
+import Image from "next/image";
+import logo from "../app/assets/2.png";
+import { RainbowButton } from "./ui/rainbow-button";
 
+const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Renamed for clarity
 
-export default () => {
-
-    const [state, setState] = useState(false)
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <>
@@ -19,11 +21,24 @@ export default () => {
                     </a>
 
                     <div className="ml-auto"> {/* Add ml-auto to push the button to the right */}
-                        <RainbowButton className="text-white">Get started</RainbowButton>
+                        <RainbowButton className="text-white" onClick={toggleMenu}>
+                            {isMenuOpen ? "Close Menu" : "Get started"}
+                        </RainbowButton>
                     </div>
                 </div>
-            </nav>
 
+                {isMenuOpen && (
+                    <div className="absolute bg-white shadow-lg mt-2">
+                        {/* Menu items can go here */}
+                        <ul>
+                            <li><a href="#link1">Link 1</a></li>
+                            <li><a href="#link2">Link 2</a></li>
+                        </ul>
+                    </div>
+                )}
+            </nav>
         </>
-    )
-}
+    );
+};
+
+export default Navbar;

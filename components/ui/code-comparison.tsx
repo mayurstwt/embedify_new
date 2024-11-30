@@ -77,7 +77,7 @@ export default function CodeComparison({
           Code Transformed to Embeds Instantly
         </h1>
       </div>
-      <div className="flex justify-center mx-4 lg:mx-0">
+      <div className="flex justify-center mx-4 lg:mx-0 untouchable">
         <div className="w-full max-w-5xl bg-white z-[99] rounded-xl p-5 overflow-auto scrollbar-hidden">
           <div className="relative w-full overflow-hidden rounded-xl border border-border">
             <div className="relative grid md:grid-cols-2 md:divide-x md:divide-border">

@@ -1,5 +1,6 @@
 import Homepage from '@/components/Homepage'
 import React from 'react'
+import './globals.css';
 
 const page = () => {
   return (

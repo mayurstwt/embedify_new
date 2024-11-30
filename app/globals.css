@@ -25,3 +25,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Default styles for mobile screens */
+.untouchable {
+  pointer-events: none; /* Disable all pointer events */
+}
+
+/* Styles for larger screens (e.g., laptops) */
+@media (min-width: 768px) { /* Adjust the min-width as needed */
+  .untouchable {
+      pointer-events: auto; /* Enable pointer events */
+  }
+}

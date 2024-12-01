@@ -32,7 +32,7 @@ const DashboardNavbar = () => {
                     </a>
 
                     <div className="ml-auto gap-x-4 flex items-center space-x-2">
-                        {session && session.user ? (
+                        {session && session.user && session.user.name ? (
                             <h1 className="text-white px-4 py-3 rounded-full border">
                                 {isMobile ? session.user.name.charAt(0) : session.user.name}
                             </h1>

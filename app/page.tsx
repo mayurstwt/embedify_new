@@ -1,30 +1,26 @@
 "use client";
 
-import Homepage from '@/components/Homepage'
-import React from 'react'
+import Homepage from '@/components/Homepage';
+import React from 'react';
 import './globals.css';
 import Dashboard from '@/components/Dashboard';
 import { useSession } from 'next-auth/react';
 
-const page = () => {
+const Page = () => { // Change 'page' to 'Page'
 
   const { data: session } = useSession();
 
   return (
     <>
-      <div className='bg-black '>
+      <div className='bg-black'>
         {session ? (
-          <>
-            <Dashboard />
-          </>
+          <Dashboard />
         ) : (
-          <>
-            <Homepage />
-          </>
+          <Homepage />
         )}
       </div>
     </>
-  )
+  );
 }
 
-export default page
+export default Page;

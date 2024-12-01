@@ -1,10 +1,6 @@
 import DashboardNavbar from "./Dashboardnavbar";
 import EmbedCodeGenerator from "./Embedcodegenerator";
-import Navbar from "./navbar";
 import FlickeringGrid from "./ui/flickering-grid";
-
-
-
 
 export function DashboardFlickeringGridDemo() {
     return (
@@ -19,8 +15,7 @@ export function DashboardFlickeringGridDemo() {
             />
 
             <DashboardNavbar />
-            <EmbedCodeGenerator/>
+            <EmbedCodeGenerator />
         </div>
     );
-
 }

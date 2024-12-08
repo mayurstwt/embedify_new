@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import icon from "@/app/assets/icon.ico"
+import icon from "@/app/assets/icon.ico";
 import SessionWrapper from "@/components/SessionWrapper";
 
 const geistSans = localFont({
@@ -30,7 +30,10 @@ export default function RootLayout({
   return (
     <SessionWrapper>
       <html lang="en">
-        <link rel="icon" href={iconUrl} />
+        <head>
+          <link rel="icon" href={iconUrl} />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
